@@ -1,7 +1,6 @@
 pragma solidity ^0.5.0;
 
 contract Hello {
-
   string public password;
   uint8 public infoNum = 42;
   string public theMethodName = "The method name is method7123949.";
@@ -20,7 +19,7 @@ contract Hello {
   }
 
   function info2(string memory param) public pure returns (string memory) {
-    if(keccak256(bytes(param)) == keccak256("hello")) {
+    if (keccak256(bytes(param)) == keccak256("hello")) {
       return "The property infoNum holds the number of the next info method to call.";
     }
     return "Wrong parameter.";
@@ -35,7 +34,7 @@ contract Hello {
   }
 
   function authenticate(string memory passkey) public {
-    if(keccak256(bytes(passkey)) == keccak256(bytes(password))) {
+    if (keccak256(bytes(passkey)) == keccak256(bytes(password))) {
       cleared = true;
     }
   }
