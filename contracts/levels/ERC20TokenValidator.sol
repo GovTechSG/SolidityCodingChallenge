@@ -23,7 +23,7 @@ contract TokenGrabbingContract {
 
 contract ERC20TokenValidator {
   bool public cleared = false;
-  address anotherAccount = address(0xA12dEbD6a9D55B4eC58F614c993b94635cD8B87F); // random account address
+  address anotherAccount = address(new TokenGrabbingContract(IERC20(address(0x0)))); // random account address
 
   function submitContract(address answer) public {
     IERC20 token = IERC20(answer);
