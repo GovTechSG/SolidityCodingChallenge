@@ -60,6 +60,8 @@ contract ERC20TokenValidator {
       anotherAccount
     ) - balanceOfAnotherAccount == 50);
 
+    // we need low level calls to allow contract to throw without killing our test
+    // solium-disable-next-line security/no-low-level-calls
     (bool testTransferFailsWhenInsufficientBalance, ) = address(token).call(
       abi.encodeWithSignature("transfer(address,uint256)", anotherAccount, 5000)
     );
@@ -69,6 +71,7 @@ contract ERC20TokenValidator {
 
   function testApproveTransfer(IERC20 token) internal returns (bool) {
     TokenGrabbingContract grabber = new TokenGrabbingContract(token);
+    // solium-disable-next-line security/no-low-level-calls
     (bool testTransferBeforeApprovalShouldFail, ) = address(grabber).call(
       abi.encodeWithSignature("getTokens()")
     );

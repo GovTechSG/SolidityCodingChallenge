@@ -51,6 +51,7 @@
     "redux-thunk": "^2.2.0",
     "rlp": "^2.0.0",
     "sha3": "^1.2.2",
+    "solium": "^1.2.1",
     "truffle": "^5.0.0",
     "truffle-deployer": "^2.0.0",
     "web3": "1.0.0-beta.37",
