@@ -1,9 +1,9 @@
 This level walks you through the very basics of how to play the game.
 
 &nbsp;
-#### 1. Set up MetaMask
+#### 1. Set up MetaMask with Ropsten
 If you don't have it already, install the [MetaMask browser extension](https://metamask.io/) (in Chrome, Firefox, Brave or Opera on your desktop machine).
-Set up the extension's wallet and use the network selector to point to the 'Ropsten test network' in the top left of the extension's interface.
+Set up the extension's wallet and use the network selector to point to the '**Ropsten** test network' in the top left of the extension's interface.
 
 &nbsp;
 #### 2. Open the browser's console
