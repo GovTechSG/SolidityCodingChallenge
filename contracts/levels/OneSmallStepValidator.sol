@@ -10,7 +10,7 @@ contract OneSmallStepValidator {
 
   function submitContract(address _contract) public {
     string memory contractQuote = IOneSmallStep(_contract).quote();
-    if(keccak256(bytes(contractQuote)) == keccak256(bytes(quote))) {
+    if (keccak256(bytes(contractQuote)) == keccak256(bytes(quote))) {
       cleared = true;
     }
   }

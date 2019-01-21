@@ -28,7 +28,6 @@ contract Ethernaut is Ownable {
   }
 
   function createLevelInstance(Level _level) public payable {
-
     // Ensure level is registered.
     require(registeredLevels[address(_level)], "Level is not registered");
 
@@ -43,15 +42,13 @@ contract Ethernaut is Ownable {
   }
 
   function submitLevelInstance(address _instance) public {
-
     // Get player and level.
     EmittedInstanceData storage data = emittedInstances[_instance];
     require(data.player == msg.sender, "Instance is not submitted by player"); // instance was emitted for this player
     require(data.completed == false, "Instance is not completed"); // not already submitted
 
     // Have the level check the instance.
-    if(data.level.validateInstance(_instance, msg.sender)) {
-
+    if (data.level.validateInstance(_instance, msg.sender)) {
       // Register instance as completed.
       data.completed = true;
 

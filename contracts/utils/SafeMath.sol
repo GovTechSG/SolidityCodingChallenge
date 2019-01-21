@@ -6,7 +6,7 @@ pragma solidity ^0.5.0;
  * @dev Math operations with safety checks that revert on error
  */
 library SafeMath {
-  int256 constant private INT256_MIN = -2**255;
+  int256 private constant INT256_MIN = -2 ** 255;
 
   /**
   * @dev Multiplies two unsigned integers, reverts on overflow.

@@ -7,11 +7,10 @@ contract UnspendableToken is ERC20Mintable {
   string public symbol;
   uint8 public decimals;
 
-  constructor (
-    string memory _name,
-    string memory _symbol,
-    uint8 _decimals
-  ) ERC20Mintable() public{
+  constructor(string memory _name, string memory _symbol, uint8 _decimals)
+    public
+    ERC20Mintable
+  {
     name = _name;
     symbol = _symbol;
     decimals = _decimals;
@@ -25,15 +24,24 @@ contract UnspendableToken is ERC20Mintable {
     revert("Transfer is disabled for this token");
   }
 
-  function transferFrom(address from, address to, uint256 value) public returns (bool) {
+  function transferFrom(address from, address to, uint256 value)
+    public
+    returns (bool)
+  {
     revert("Transfer is disabled for this token");
   }
 
-  function increaseAllowance(address spender, uint256 addedValue) public returns (bool) {
+  function increaseAllowance(address spender, uint256 addedValue)
+    public
+    returns (bool)
+  {
     revert("Transfer is disabled for this token");
   }
 
-  function decreaseAllowance(address spender, uint256 subtractedValue) public returns (bool) {
+  function decreaseAllowance(address spender, uint256 subtractedValue)
+    public
+    returns (bool)
+  {
     revert("Transfer is disabled for this token");
   }
 }
