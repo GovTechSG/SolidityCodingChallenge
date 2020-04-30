@@ -14,7 +14,9 @@
     "lint": "npm run eslint && npm run solium",
     "lint:fix": "npm run eslint:fix && npm run solium:fix",
     "compile:contracts": "rm -rf build && npx truffle compile",
-    "deploy:contracts": "npm run compile:contracts && node scripts/deploy_contracts.js"
+    "deploy:contracts": "npm run compile:contracts && node scripts/deploy_contracts.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -57,7 +59,8 @@
     "web3-core-helpers": "1.0.0-beta.37",
     "web3-core-method": "1.0.0-beta.37",
     "web3-utils": "1.0.0-beta.37",
-    "zeppelin-solidity": "1.6.0"
+    "zeppelin-solidity": "1.6.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "solium": "^1.2.1",
@@ -158,5 +161,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "snyk": true
 }
